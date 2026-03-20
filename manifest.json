@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.2.0",
   "updated": "2026-03-20",
   "skills": {
     "server/nginx": {
@@ -22,6 +22,50 @@
       "version": "0.1.0",
       "description": "Redis cache/store management"
     },
+    "server/mongodb": {
+      "version": "0.1.0",
+      "description": "MongoDB document database management"
+    },
+    "server/sqlite": {
+      "version": "0.1.0",
+      "description": "SQLite embedded database management"
+    },
+    "server/cassandra": {
+      "version": "0.1.0",
+      "description": "Apache Cassandra distributed database"
+    },
+    "server/elasticsearch": {
+      "version": "0.1.0",
+      "description": "Elasticsearch search & analytics engine"
+    },
+    "server/rabbitmq": {
+      "version": "0.1.0",
+      "description": "RabbitMQ message broker management"
+    },
+    "server/memcached": {
+      "version": "0.1.0",
+      "description": "Memcached in-memory cache"
+    },
+    "server/caddy": {
+      "version": "0.1.0",
+      "description": "Caddy web server with automatic HTTPS"
+    },
+    "server/haproxy": {
+      "version": "0.1.0",
+      "description": "HAProxy load balancer management"
+    },
+    "server/wireguard": {
+      "version": "0.1.0",
+      "description": "WireGuard VPN tunnel management"
+    },
+    "server/cloudflare-install": {
+      "version": "0.1.0",
+      "description": "Cloudflare Tunnel installation"
+    },
+    "server/cloudflare-ops": {
+      "version": "0.1.0",
+      "description": "Cloudflare Tunnel operations & routing"
+    },
     "apps/nextcloud": {
       "version": "0.1.0",
       "description": "Nextcloud server management"
@@ -34,13 +78,69 @@
       "version": "0.1.0",
       "description": "Kubernetes cluster management"
     },
-    "server/cloudflare-install": {
+    "infra/docker-compose": {
       "version": "0.1.0",
-      "description": "Cloudflare Tunnel installation"
+      "description": "Docker Compose multi-container management"
     },
-    "server/cloudflare-ops": {
+    "infra/jenkins": {
       "version": "0.1.0",
-      "description": "Cloudflare Tunnel operations & routing"
+      "description": "Jenkins CI/CD server management"
+    },
+    "infra/ansible": {
+      "version": "0.1.0",
+      "description": "Ansible automation & configuration management"
+    },
+    "infra/terraform": {
+      "version": "0.1.0",
+      "description": "Terraform infrastructure as code"
+    },
+    "infra/certbot": {
+      "version": "0.1.0",
+      "description": "Certbot SSL/TLS certificate management"
+    },
+    "infra/gitlab-runner": {
+      "version": "0.1.0",
+      "description": "GitLab Runner CI/CD executor"
+    },
+    "infra/grafana": {
+      "version": "0.1.0",
+      "description": "Grafana monitoring dashboards"
+    },
+    "infra/prometheus": {
+      "version": "0.1.0",
+      "description": "Prometheus metrics & alerting"
+    },
+    "cloud/aws-cli": {
+      "version": "0.1.0",
+      "description": "AWS CLI v2 — S3, EC2, IAM, CloudFormation"
+    },
+    "cloud/gcloud": {
+      "version": "0.1.0",
+      "description": "Google Cloud CLI — Compute, Storage, IAM, App Engine"
+    },
+    "cloud/azure-cli": {
+      "version": "0.1.0",
+      "description": "Azure CLI — VMs, Storage, Resource Groups, AKS"
+    },
+    "runtime/nodejs": {
+      "version": "0.1.0",
+      "description": "Node.js runtime — NVM, npm/yarn/pnpm, PM2"
+    },
+    "runtime/python": {
+      "version": "0.1.0",
+      "description": "Python runtime — venv, pip, pyenv, uvicorn/gunicorn"
+    },
+    "runtime/golang": {
+      "version": "0.1.0",
+      "description": "Go runtime — modules, build/test, cross-compile"
+    },
+    "runtime/java": {
+      "version": "0.1.0",
+      "description": "Java runtime — OpenJDK, Maven, Gradle, Tomcat, Spring Boot"
+    },
+    "runtime/rust": {
+      "version": "0.1.0",
+      "description": "Rust runtime — rustup, Cargo, cross-compile, release builds"
     }
   }
 }
