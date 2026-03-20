@@ -1,0 +1,14 @@
+{
+  "version": "0.1.0",
+  "updated": "2026-03-20",
+  "skills": {
+    "server/nginx": {"version": "0.1.0", "description": "Nginx web server management"},
+    "server/apache": {"version": "0.1.0", "description": "Apache httpd management"},
+    "server/postgres": {"version": "0.1.0", "description": "PostgreSQL database management"},
+    "server/mysql": {"version": "0.1.0", "description": "MySQL/MariaDB management"},
+    "server/redis": {"version": "0.1.0", "description": "Redis cache/store management"},
+    "apps/nextcloud": {"version": "0.1.0", "description": "Nextcloud server management"},
+    "apps/discourse": {"version": "0.1.0", "description": "Discourse forum management"},
+    "infra/kubernetes": {"version": "0.1.0", "description": "Kubernetes cluster management"}
+  }
+}
