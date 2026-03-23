@@ -157,6 +157,10 @@
     "security/wazuh": {
       "version": "0.1.0",
       "description": "Wazuh SIEM/XDR platform"
+    },
+    "security/compliance-scan": {
+      "version": "0.1.0",
+      "description": "NIST 800-53 r5 and CMMC compliance scanning"
     }
   }
 }
