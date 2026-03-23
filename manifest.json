@@ -1,5 +1,5 @@
 {
-  "version": "0.3.0",
+  "version": "0.4.0",
   "updated": "2026-03-23",
   "skills": {
     "server/nginx": {
@@ -112,35 +112,35 @@
     },
     "cloud/aws-cli": {
       "version": "0.1.0",
-      "description": "AWS CLI v2 — S3, EC2, IAM, CloudFormation"
+      "description": "AWS CLI v2 \u2014 S3, EC2, IAM, CloudFormation"
     },
     "cloud/gcloud": {
       "version": "0.1.0",
-      "description": "Google Cloud CLI — Compute, Storage, IAM, App Engine"
+      "description": "Google Cloud CLI \u2014 Compute, Storage, IAM, App Engine"
     },
     "cloud/azure-cli": {
       "version": "0.1.0",
-      "description": "Azure CLI — VMs, Storage, Resource Groups, AKS"
+      "description": "Azure CLI \u2014 VMs, Storage, Resource Groups, AKS"
     },
     "runtime/nodejs": {
       "version": "0.1.0",
-      "description": "Node.js runtime — NVM, npm/yarn/pnpm, PM2"
+      "description": "Node.js runtime \u2014 NVM, npm/yarn/pnpm, PM2"
     },
     "runtime/python": {
       "version": "0.1.0",
-      "description": "Python runtime — venv, pip, pyenv, uvicorn/gunicorn"
+      "description": "Python runtime \u2014 venv, pip, pyenv, uvicorn/gunicorn"
     },
     "runtime/golang": {
       "version": "0.1.0",
-      "description": "Go runtime — modules, build/test, cross-compile"
+      "description": "Go runtime \u2014 modules, build/test, cross-compile"
     },
     "runtime/java": {
       "version": "0.1.0",
-      "description": "Java runtime — OpenJDK, Maven, Gradle, Tomcat, Spring Boot"
+      "description": "Java runtime \u2014 OpenJDK, Maven, Gradle, Tomcat, Spring Boot"
     },
     "runtime/rust": {
       "version": "0.1.0",
-      "description": "Rust runtime — rustup, Cargo, cross-compile, release builds"
+      "description": "Rust runtime \u2014 rustup, Cargo, cross-compile, release builds"
     },
     "security/openvas": {
       "version": "0.1.0",
@@ -157,6 +157,10 @@
     "security/wazuh": {
       "version": "0.1.0",
       "description": "Wazuh SIEM/XDR platform"
+    },
+    "security/compliance-scan": {
+      "version": "0.1.0",
+      "description": "NIST 800-53 & CMMC compliance scanning"
     }
   }
 }
