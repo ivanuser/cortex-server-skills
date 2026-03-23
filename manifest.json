@@ -1,6 +1,6 @@
 {
-  "version": "0.2.0",
-  "updated": "2026-03-20",
+  "version": "0.3.0",
+  "updated": "2026-03-23",
   "skills": {
     "server/nginx": {
       "version": "0.1.0",
@@ -141,6 +141,22 @@
     "runtime/rust": {
       "version": "0.1.0",
       "description": "Rust runtime — rustup, Cargo, cross-compile, release builds"
+    },
+    "security/openvas": {
+      "version": "0.1.0",
+      "description": "OpenVAS/Greenbone vulnerability scanner management"
+    },
+    "security/splunk": {
+      "version": "0.1.0",
+      "description": "Splunk Enterprise log analysis & SIEM"
+    },
+    "security/nessus": {
+      "version": "0.1.0",
+      "description": "Tenable Nessus vulnerability scanner"
+    },
+    "security/wazuh": {
+      "version": "0.1.0",
+      "description": "Wazuh SIEM/XDR platform"
     }
   }
 }
