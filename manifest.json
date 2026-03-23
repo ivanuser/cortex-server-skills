@@ -161,6 +161,74 @@
     "security/compliance-scan": {
       "version": "0.1.0",
       "description": "NIST 800-53 r5 and CMMC compliance scanning"
+    },
+    "infra/incident-diagnostics": {
+      "version": "0.1.0",
+      "description": "System incident diagnostics and root cause troubleshooting"
+    },
+    "infra/backup-disaster-recovery": {
+      "version": "0.1.0",
+      "description": "Backup creation, offsite sync, and disaster recovery runbooks"
+    },
+    "infra/zero-downtime-deploy": {
+      "version": "0.1.0",
+      "description": "Zero-downtime deployment workflows with rollback"
+    },
+    "security/ssh-hardening-incident-response": {
+      "version": "0.1.0",
+      "description": "SSH hardening and access incident response"
+    },
+    "server/user-permission-ops": {
+      "version": "0.1.0",
+      "description": "User provisioning, sudoers management, and permission fixes"
+    },
+    "infra/log-rotation-storage-maintenance": {
+      "version": "0.1.0",
+      "description": "Log rotation, inode diagnostics, and storage maintenance"
+    },
+    "infra/patch-management-os-upgrades": {
+      "version": "0.1.0",
+      "description": "Patch orchestration and safe OS upgrade operations"
+    },
+    "infra/ssl-certificate-lifecycle": {
+      "version": "0.1.0",
+      "description": "TLS certificate lifecycle operations and debugging"
+    },
+    "infra/performance-tuning-stress-testing": {
+      "version": "0.1.0",
+      "description": "Kernel/web tuning and load test validation"
+    },
+    "security/secrets-environment-management": {
+      "version": "0.1.0",
+      "description": "Secure .env handling and secret rotation workflows"
+    },
+    "infra/high-availability-clustering": {
+      "version": "0.1.0",
+      "description": "HA clustering, replication, and failover playbooks"
+    },
+    "cloud/finops-cost-optimization": {
+      "version": "0.1.0",
+      "description": "Cloud cost optimization and FinOps automation"
+    },
+    "server/advanced-database-tuning": {
+      "version": "0.1.0",
+      "description": "Slow query analysis, vacuum strategy, and connection pooling"
+    },
+    "security/automated-compliance-auditing": {
+      "version": "0.1.0",
+      "description": "Automated compliance scans and security auditing"
+    },
+    "infra/infrastructure-drift-remediation": {
+      "version": "0.1.0",
+      "description": "Terraform drift detection and reconciliation"
+    },
+    "infra/chaos-engineering": {
+      "version": "0.1.0",
+      "description": "Controlled fault injection for resilience validation"
+    },
+    "infra/chatops-incident-communication": {
+      "version": "0.1.0",
+      "description": "ChatOps alerts and automated postmortem reporting"
     }
   }
 }
