@@ -2,7 +2,41 @@
 
 Install and configure Cloudflare Tunnel (cloudflared) to expose services securely without opening ports.
 
-## Quick Install (Debian/Ubuntu)
+## Safety Rules
+
+- Treat tunnel tokens and tunnel credential files as secrets.
+- Never expose admin interfaces without Cloudflare Access policies.
+- Validate ingress rules before restarting the service to avoid downtime.
+- Use least-privilege DNS scope for API tokens used with tunnel DNS routing.
+- Keep a local rollback copy of `/etc/cloudflared/config.yml` before major changes.
+
+## Quick Reference
+
+```bash
+# Install (Debian/Ubuntu)
+sudo apt-get update && sudo apt-get install -y cloudflared
+
+# Version check
+cloudflared --version
+
+# Login and create tunnel
+cloudflared tunnel login
+cloudflared tunnel create my-tunnel
+
+# Install as service (token-based)
+sudo cloudflared service install YOUR_TUNNEL_TOKEN
+
+# Service operations
+sudo systemctl status cloudflared
+sudo systemctl restart cloudflared
+
+# Validate ingress config
+cloudflared tunnel ingress validate
+```
+
+## Installation
+
+### Quick Install (Debian/Ubuntu)
 
 ```bash
 # Add Cloudflare GPG key
@@ -19,7 +53,7 @@ sudo apt-get update && sudo apt-get install -y cloudflared
 cloudflared --version
 ```
 
-## Other Install Methods
+### Other Install Methods
 
 ### Direct Binary (any Linux)
 ```bash
@@ -119,4 +153,5 @@ sudo rm -f /etc/apt/sources.list.d/cloudflared.list
 - **"failed to connect"** — check DNS resolution, firewall not blocking outbound 443
 - **"no such host"** — tunnel might be deleted in Cloudflare dashboard
 - **Service won't start** — check token is correct: `sudo cat /etc/cloudflared/config.yml`
+- **Ingress rule errors** — run `cloudflared tunnel ingress validate` and confirm catch-all rule is last
 - **Tunnel shows "down"** — restart service: `sudo systemctl restart cloudflared`

@@ -37,6 +37,13 @@ for c in json.load(sys.stdin)['controls']:
 "
 ```
 
+## Quick Navigation
+
+- Use `Quick Reference` for full-scan and summary commands.
+- Jump to family sections (`AC`, `AU`, `CM`, `IA`, `SC`, `SI`) for control-level checks.
+- Use `Output Format` to map scanner JSON fields into dashboards or alerts.
+- Use `Troubleshooting` when scans fail, look incomplete, or data appears stale.
+
 ## Frameworks Covered
 
 | Framework | Version | Controls Checked |
@@ -1021,3 +1028,18 @@ sudo systemctl start cortexos-compliance.service
 # View next run time
 systemctl list-timers cortexos-compliance.timer
 ```
+
+## Troubleshooting
+
+- **`cortexos-compliance-scan: command not found`** — verify install path and executable bit:
+  `ls -l /usr/local/bin/cortexos-compliance-scan`
+- **Scan fails with permission errors** — run with sudo and verify access to protected files (`/etc/shadow`, audit configs):
+  `sudo cortexos-compliance-scan`
+- **`compliance.json` not updating** — check service/timer health:
+  `systemctl status cortexos-compliance.service cortexos-compliance.timer`
+- **Timer not running on boot** — enable and start timer:
+  `sudo systemctl enable --now cortexos-compliance.timer`
+- **JSON output looks malformed** — validate output file before ingesting into dashboards:
+  `python3 -m json.tool /var/lib/cortexos/dashboard/compliance.json >/dev/null`
+- **Stale dashboard data** — compare file timestamp vs current time:
+  `stat /var/lib/cortexos/dashboard/compliance.json`

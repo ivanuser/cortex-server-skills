@@ -2,6 +2,35 @@
 
 Manage Cloudflare Tunnels, DNS routing, and service exposure after cloudflared is installed.
 
+## Safety Rules
+
+- Always keep a final catch-all ingress rule: `- service: http_status:404`.
+- Protect tunnel credential files (`~/.cloudflared/<UUID>.json`) and never commit them to git.
+- Use Zero Trust Access for admin apps, dashboards, and SSH endpoints.
+- Avoid `noTLSVerify: true` unless you are intentionally using self-signed certs.
+- For production changes, validate config before restart to prevent tunnel outages.
+
+## Quick Reference
+
+```bash
+# List tunnels and show details
+cloudflared tunnel list
+cloudflared tunnel info my-tunnel
+
+# DNS routing
+cloudflared tunnel route dns my-tunnel app.example.com
+
+# Validate ingress config
+cloudflared tunnel ingress validate
+
+# Service operations
+sudo systemctl status cloudflared
+sudo systemctl restart cloudflared
+
+# Temporary test tunnel
+cloudflared tunnel --url http://localhost:8080
+```
+
 ## Tunnel Management
 
 ### List Tunnels
@@ -208,11 +237,3 @@ ss -tunap | grep cloudflared | wc -l
 - **Slow connections** — check if origin is binding to IPv6. Force IPv4: `service: http://127.0.0.1:<port>`
 - **Config not loading** — validate: `cloudflared tunnel ingress validate`
 - **Multiple tunnels fighting** — check no duplicate configs: `ls /etc/cloudflared/`
-
-## Safety Rules
-
-- **Always have a catch-all rule** as the last ingress entry (`service: http_status:404`)
-- **Don't expose admin panels** without Zero Trust access policies
-- **Use noTLSVerify only for self-signed certs** — not for production origins
-- **Quick tunnels are temporary** — don't use for production
-- **Back up credentials files** — `~/.cloudflared/<UUID>.json` is needed to run the tunnel
