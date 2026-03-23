@@ -1,234 +1,234 @@
 {
-  "version": "0.3.0",
+  "version": "0.4.0",
   "updated": "2026-03-23",
   "skills": {
-    "server/nginx": {
-      "version": "0.1.0",
-      "description": "Nginx web server management"
-    },
-    "server/apache": {
-      "version": "0.1.0",
-      "description": "Apache httpd management"
-    },
-    "server/postgres": {
-      "version": "0.1.0",
-      "description": "PostgreSQL database management"
-    },
-    "server/mysql": {
-      "version": "0.1.0",
-      "description": "MySQL/MariaDB management"
-    },
-    "server/redis": {
-      "version": "0.1.0",
-      "description": "Redis cache/store management"
-    },
-    "server/mongodb": {
-      "version": "0.1.0",
-      "description": "MongoDB document database management"
-    },
-    "server/sqlite": {
-      "version": "0.1.0",
-      "description": "SQLite embedded database management"
-    },
-    "server/cassandra": {
-      "version": "0.1.0",
-      "description": "Apache Cassandra distributed database"
-    },
-    "server/elasticsearch": {
-      "version": "0.1.0",
-      "description": "Elasticsearch search & analytics engine"
-    },
-    "server/rabbitmq": {
-      "version": "0.1.0",
-      "description": "RabbitMQ message broker management"
-    },
-    "server/memcached": {
-      "version": "0.1.0",
-      "description": "Memcached in-memory cache"
-    },
-    "server/caddy": {
-      "version": "0.1.0",
-      "description": "Caddy web server with automatic HTTPS"
-    },
-    "server/haproxy": {
-      "version": "0.1.0",
-      "description": "HAProxy load balancer management"
-    },
-    "server/wireguard": {
-      "version": "0.1.0",
-      "description": "WireGuard VPN tunnel management"
-    },
-    "server/cloudflare-install": {
-      "version": "0.1.0",
-      "description": "Cloudflare Tunnel installation"
-    },
-    "server/cloudflare-ops": {
-      "version": "0.1.0",
-      "description": "Cloudflare Tunnel operations & routing"
+    "apps/discourse": {
+      "version": "0.3.0",
+      "description": "> Install, configure, and manage Discourse \u2014 Docker deployment, plugins, backups, email, user manage"
     },
     "apps/nextcloud": {
-      "version": "0.1.0",
-      "description": "Nextcloud server management"
-    },
-    "apps/discourse": {
-      "version": "0.1.0",
-      "description": "Discourse forum management"
-    },
-    "infra/kubernetes": {
-      "version": "0.1.0",
-      "description": "Kubernetes cluster management"
-    },
-    "infra/docker-compose": {
-      "version": "0.1.0",
-      "description": "Docker Compose multi-container management"
-    },
-    "infra/jenkins": {
-      "version": "0.1.0",
-      "description": "Jenkins CI/CD server management"
-    },
-    "infra/ansible": {
-      "version": "0.1.0",
-      "description": "Ansible automation & configuration management"
-    },
-    "infra/terraform": {
-      "version": "0.1.0",
-      "description": "Terraform infrastructure as code"
-    },
-    "infra/certbot": {
-      "version": "0.1.0",
-      "description": "Certbot SSL/TLS certificate management"
-    },
-    "infra/gitlab-runner": {
-      "version": "0.1.0",
-      "description": "GitLab Runner CI/CD executor"
-    },
-    "infra/grafana": {
-      "version": "0.1.0",
-      "description": "Grafana monitoring dashboards"
-    },
-    "infra/prometheus": {
-      "version": "0.1.0",
-      "description": "Prometheus metrics & alerting"
+      "version": "0.3.0",
+      "description": "> Install, configure, and manage Nextcloud \u2014 file sync, sharing, occ administration, upgrades, perfo"
     },
     "cloud/aws-cli": {
-      "version": "0.1.0",
-      "description": "AWS CLI v2 \u2014 S3, EC2, IAM, CloudFormation"
-    },
-    "cloud/gcloud": {
-      "version": "0.1.0",
-      "description": "Google Cloud CLI \u2014 Compute, Storage, IAM, App Engine"
+      "version": "0.3.0",
+      "description": "> Install, configure, and use the AWS CLI v2 for managing S3, EC2, IAM, CloudFormation, and other AW"
     },
     "cloud/azure-cli": {
-      "version": "0.1.0",
-      "description": "Azure CLI \u2014 VMs, Storage, Resource Groups, AKS"
-    },
-    "runtime/nodejs": {
-      "version": "0.1.0",
-      "description": "Node.js runtime \u2014 NVM, npm/yarn/pnpm, PM2"
-    },
-    "runtime/python": {
-      "version": "0.1.0",
-      "description": "Python runtime \u2014 venv, pip, pyenv, uvicorn/gunicorn"
-    },
-    "runtime/golang": {
-      "version": "0.1.0",
-      "description": "Go runtime \u2014 modules, build/test, cross-compile"
-    },
-    "runtime/java": {
-      "version": "0.1.0",
-      "description": "Java runtime \u2014 OpenJDK, Maven, Gradle, Tomcat, Spring Boot"
-    },
-    "runtime/rust": {
-      "version": "0.1.0",
-      "description": "Rust runtime \u2014 rustup, Cargo, cross-compile, release builds"
-    },
-    "security/openvas": {
-      "version": "0.1.0",
-      "description": "OpenVAS/Greenbone vulnerability scanner management"
-    },
-    "security/splunk": {
-      "version": "0.1.0",
-      "description": "Splunk Enterprise log analysis & SIEM"
-    },
-    "security/nessus": {
-      "version": "0.1.0",
-      "description": "Tenable Nessus vulnerability scanner"
-    },
-    "security/wazuh": {
-      "version": "0.1.0",
-      "description": "Wazuh SIEM/XDR platform"
-    },
-    "security/compliance-scan": {
-      "version": "0.1.0",
-      "description": "NIST 800-53 r5 and CMMC compliance scanning"
-    },
-    "infra/incident-diagnostics": {
-      "version": "0.1.0",
-      "description": "System incident diagnostics and root cause troubleshooting"
-    },
-    "infra/backup-disaster-recovery": {
-      "version": "0.1.0",
-      "description": "Backup creation, offsite sync, and disaster recovery runbooks"
-    },
-    "infra/zero-downtime-deploy": {
-      "version": "0.1.0",
-      "description": "Zero-downtime deployment workflows with rollback"
-    },
-    "security/ssh-hardening-incident-response": {
-      "version": "0.1.0",
-      "description": "SSH hardening and access incident response"
-    },
-    "server/user-permission-ops": {
-      "version": "0.1.0",
-      "description": "User provisioning, sudoers management, and permission fixes"
-    },
-    "infra/log-rotation-storage-maintenance": {
-      "version": "0.1.0",
-      "description": "Log rotation, inode diagnostics, and storage maintenance"
-    },
-    "infra/patch-management-os-upgrades": {
-      "version": "0.1.0",
-      "description": "Patch orchestration and safe OS upgrade operations"
-    },
-    "infra/ssl-certificate-lifecycle": {
-      "version": "0.1.0",
-      "description": "TLS certificate lifecycle operations and debugging"
-    },
-    "infra/performance-tuning-stress-testing": {
-      "version": "0.1.0",
-      "description": "Kernel/web tuning and load test validation"
-    },
-    "security/secrets-environment-management": {
-      "version": "0.1.0",
-      "description": "Secure .env handling and secret rotation workflows"
-    },
-    "infra/high-availability-clustering": {
-      "version": "0.1.0",
-      "description": "HA clustering, replication, and failover playbooks"
+      "version": "0.3.0",
+      "description": "> Install, authenticate, and manage Azure resources including VMs, storage accounts, resource groups"
     },
     "cloud/finops-cost-optimization": {
-      "version": "0.1.0",
-      "description": "Cloud cost optimization and FinOps automation"
+      "version": "0.3.0",
+      "description": "> Detect waste, right-size resources, and use lower-cost capacity options safely."
     },
-    "server/advanced-database-tuning": {
-      "version": "0.1.0",
-      "description": "Slow query analysis, vacuum strategy, and connection pooling"
+    "cloud/gcloud": {
+      "version": "0.3.0",
+      "description": "> Install, authenticate, and manage Google Cloud Platform resources including Compute Engine, Cloud "
     },
-    "security/automated-compliance-auditing": {
-      "version": "0.1.0",
-      "description": "Automated compliance scans and security auditing"
+    "infra/ansible": {
+      "version": "0.3.0",
+      "description": "> Install, configure, and manage Ansible for automating server provisioning, configuration, and depl"
     },
-    "infra/infrastructure-drift-remediation": {
-      "version": "0.1.0",
-      "description": "Terraform drift detection and reconciliation"
+    "infra/backup-disaster-recovery": {
+      "version": "0.3.0",
+      "description": "> Create reliable backups, sync them offsite, and restore fast with verification."
+    },
+    "infra/certbot": {
+      "version": "0.3.0",
+      "description": "> Install, configure, and manage Certbot for automatic TLS certificate provisioning via Let's Encryp"
     },
     "infra/chaos-engineering": {
-      "version": "0.1.0",
-      "description": "Controlled fault injection for resilience validation"
+      "version": "0.3.0",
+      "description": "> Inject controlled faults to verify recovery, alerting, and resilience behavior before real inciden"
     },
     "infra/chatops-incident-communication": {
-      "version": "0.1.0",
-      "description": "ChatOps alerts and automated postmortem reporting"
+      "version": "0.3.0",
+      "description": "> Send actionable alerts to team channels and auto-generate postmortems after incidents are resolved"
+    },
+    "infra/docker-compose": {
+      "version": "0.3.0",
+      "description": "> Install, configure, and manage Docker Compose for defining and running multi-container application"
+    },
+    "infra/gitlab-runner": {
+      "version": "0.3.0",
+      "description": "> Install, register, and manage GitLab Runner for executing CI/CD pipelines. Covers Docker and Shell"
+    },
+    "infra/grafana": {
+      "version": "0.3.0",
+      "description": "> Install, configure, and manage Grafana for data visualization, dashboards, and alerting. Covers da"
+    },
+    "infra/high-availability-clustering": {
+      "version": "0.3.0",
+      "description": "> Build fault-tolerant data and traffic layers using replication, sentinel failover, and active heal"
+    },
+    "infra/incident-diagnostics": {
+      "version": "0.3.0",
+      "description": "> Triage Linux incidents quickly using CPU, memory, disk, process, and network evidence."
+    },
+    "infra/infrastructure-drift-remediation": {
+      "version": "0.3.0",
+      "description": "> Detect and reconcile cloud infrastructure drift against Terraform source of truth."
+    },
+    "infra/jenkins": {
+      "version": "0.3.0",
+      "description": "> Install, configure, and manage Jenkins for continuous integration and deployment. Covers pipelines"
+    },
+    "infra/kubernetes": {
+      "version": "0.3.0",
+      "description": "> Manage Kubernetes clusters with kubectl \u2014 deployments, services, ingress, storage, debugging, Helm"
+    },
+    "infra/log-rotation-storage-maintenance": {
+      "version": "0.3.0",
+      "description": "> Prevent disk exhaustion with logrotate policies, inode diagnostics, and safe Docker cleanup routin"
+    },
+    "infra/patch-management-os-upgrades": {
+      "version": "0.3.0",
+      "description": "> Apply security updates safely, handle unattended upgrades, and coordinate reboots with minimal ser"
+    },
+    "infra/performance-tuning-stress-testing": {
+      "version": "0.3.0",
+      "description": "> Tune kernel and web stack settings, then prove improvement with repeatable load tests."
+    },
+    "infra/prometheus": {
+      "version": "0.3.0",
+      "description": "> Install, configure, and manage Prometheus for metrics collection, alerting, and monitoring. Covers"
+    },
+    "infra/ssl-certificate-lifecycle": {
+      "version": "0.3.0",
+      "description": "> Manage TLS from issuance to renewal, emergency replacement, and internal self-signed cert generati"
+    },
+    "infra/terraform": {
+      "version": "0.3.0",
+      "description": "> Install, configure, and manage Terraform for provisioning cloud and on-prem infrastructure. Covers"
+    },
+    "infra/zero-downtime-deploy": {
+      "version": "0.3.0",
+      "description": "> Deploy application updates with minimal or no user-visible downtime."
+    },
+    "runtime/golang": {
+      "version": "0.3.0",
+      "description": "> Install Go, manage modules, build/run/test programs, cross-compile for multiple platforms, and dep"
+    },
+    "runtime/java": {
+      "version": "0.3.0",
+      "description": "> Install OpenJDK, configure JAVA_HOME, manage builds with Maven and Gradle, set up Tomcat, and depl"
+    },
+    "runtime/nodejs": {
+      "version": "0.3.0",
+      "description": "> Install Node.js via NVM, manage packages with npm/yarn/pnpm, run production apps with PM2, and con"
+    },
+    "runtime/python": {
+      "version": "0.3.0",
+      "description": "> Install Python, manage virtual environments, use pip/pyenv, run ASGI/WSGI servers with uvicorn/gun"
+    },
+    "runtime/rust": {
+      "version": "0.3.0",
+      "description": "> Install Rust via rustup, manage projects with Cargo, build/test/run programs, cross-compile for mu"
+    },
+    "security/automated-compliance-auditing": {
+      "version": "0.3.0",
+      "description": "> Continuously validate host and cloud posture using benchmark scans, network diffing, and IAM polic"
+    },
+    "security/compliance-scan": {
+      "version": "0.3.0",
+      "description": "> Scan a Linux server against NIST 800-53 rev 5 and CMMC Level 1/2/3 controls."
+    },
+    "security/nessus": {
+      "version": "0.3.0",
+      "description": "> Install, configure, and manage Tenable Nessus for vulnerability scanning, compliance auditing, and"
+    },
+    "security/openvas": {
+      "version": "0.3.0",
+      "description": "> Install, configure, and manage the Greenbone Vulnerability Management (GVM/OpenVAS) stack for netw"
+    },
+    "security/secrets-environment-management": {
+      "version": "0.3.0",
+      "description": "> Manage `.env` secrets securely, enforce permissions, and rotate compromised credentials with contr"
+    },
+    "security/splunk": {
+      "version": "0.3.0",
+      "description": "> Install, configure, and manage Splunk Enterprise and Universal Forwarder for log aggregation, sear"
+    },
+    "security/ssh-hardening-incident-response": {
+      "version": "0.3.0",
+      "description": "> Secure SSH access and respond quickly to brute-force or credential compromise events."
+    },
+    "security/wazuh": {
+      "version": "0.3.0",
+      "description": "> Install, configure, and manage Wazuh for threat detection, integrity monitoring, incident response"
+    },
+    "server/advanced-database-tuning": {
+      "version": "0.3.0",
+      "description": "> Improve database performance with slow query analysis, vacuum strategy, and connection pooling."
+    },
+    "server/apache": {
+      "version": "0.3.0",
+      "description": "> Install, configure, and manage Apache for virtual hosting, PHP apps, WordPress, SSL, reverse proxy"
+    },
+    "server/caddy": {
+      "version": "0.3.0",
+      "description": "> Install, configure, and manage Caddy for web serving, reverse proxying, and automatic TLS. Covers "
+    },
+    "server/cassandra": {
+      "version": "0.3.0",
+      "description": "> Install, configure, and manage Apache Cassandra for high-availability, wide-column data storage. C"
+    },
+    "server/cloudflare-install": {
+      "version": "0.3.0",
+      "description": "Install and configure Cloudflare Tunnel (cloudflared) to expose services securely without opening po"
+    },
+    "server/cloudflare-ops": {
+      "version": "0.3.0",
+      "description": "Manage Cloudflare Tunnels, DNS routing, and service exposure after cloudflared is installed."
+    },
+    "server/elasticsearch": {
+      "version": "0.3.0",
+      "description": "> Install, configure, and manage Elasticsearch for full-text search, log analytics, and real-time da"
+    },
+    "server/haproxy": {
+      "version": "0.3.0",
+      "description": "> Install, configure, and manage HAProxy for TCP/HTTP load balancing, SSL termination, health checks"
+    },
+    "server/memcached": {
+      "version": "0.3.0",
+      "description": "> Install, configure, and manage Memcached for high-performance in-memory key-value caching. Covers "
+    },
+    "server/mongodb": {
+      "version": "0.3.0",
+      "description": "> Install, configure, and manage MongoDB for document storage. Covers collections, indexes, replica "
+    },
+    "server/mysql": {
+      "version": "0.3.0",
+      "description": "> Install, configure, and manage MySQL \u2014 databases, users, backups, replication, InnoDB tuning, and "
+    },
+    "server/nginx": {
+      "version": "0.3.0",
+      "description": "> Install, configure, and manage Nginx for static sites, reverse proxying, SSL termination, load bal"
+    },
+    "server/postgres": {
+      "version": "0.3.0",
+      "description": "> Install, configure, and manage PostgreSQL \u2014 databases, users, backups, replication, performance tu"
+    },
+    "server/rabbitmq": {
+      "version": "0.3.0",
+      "description": "> Install, configure, and manage RabbitMQ for message queuing, pub/sub, and event-driven architectur"
+    },
+    "server/redis": {
+      "version": "0.3.0",
+      "description": "> Install, configure, and manage Redis for caching, sessions, pub/sub, queues, and real-time data. C"
+    },
+    "server/sqlite": {
+      "version": "0.3.0",
+      "description": "> Use and manage SQLite for lightweight, serverless, embedded databases. Covers database creation, s"
+    },
+    "server/user-permission-ops": {
+      "version": "0.3.0",
+      "description": "> Create users safely, grant least-privilege sudo access, and fix file permission issues without bre"
+    },
+    "server/wireguard": {
+      "version": "0.3.0",
+      "description": "> Install, configure, and manage WireGuard for fast, secure VPN tunnels. Covers key generation, serv"
     }
   }
 }
