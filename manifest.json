@@ -229,6 +229,66 @@
     "infra/chatops-incident-communication": {
       "version": "0.1.0",
       "description": "ChatOps alerts and automated postmortem reporting"
+    },
+    "infra/slo-sli-error-budget": {
+      "version": "0.1.0",
+      "description": "SLO/SLI tracking with error budget operations"
+    },
+    "infra/canary-bluegreen-deployments": {
+      "version": "0.1.0",
+      "description": "Progressive deployment and rollback strategies"
+    },
+    "infra/multi-region-failover": {
+      "version": "0.1.0",
+      "description": "Multi-region failover and failback runbooks"
+    },
+    "infra/service-dependency-mapping": {
+      "version": "0.1.0",
+      "description": "Service dependency inventory and blast-radius mapping"
+    },
+    "infra/queue-reliability-ops": {
+      "version": "0.1.0",
+      "description": "Queue reliability, DLQ handling, and retry patterns"
+    },
+    "server/dns-operations": {
+      "version": "0.1.0",
+      "description": "DNS change management and propagation verification"
+    },
+    "security/waf-ddos-operations": {
+      "version": "0.1.0",
+      "description": "WAF rule operations and DDoS response playbooks"
+    },
+    "security/container-runtime-hardening": {
+      "version": "0.1.0",
+      "description": "Container runtime hardening and policy controls"
+    },
+    "security/sbom-supply-chain-security": {
+      "version": "0.1.0",
+      "description": "SBOM generation and supply chain security checks"
+    },
+    "security/centralized-secrets-management": {
+      "version": "0.1.0",
+      "description": "Centralized secret storage and rotation workflows"
+    },
+    "cloud/identity-access-governance": {
+      "version": "0.1.0",
+      "description": "IAM governance, least privilege, and access reviews"
+    },
+    "cloud/tagging-policy-enforcement": {
+      "version": "0.1.0",
+      "description": "Cloud tagging policy enforcement and remediation"
+    },
+    "infra/capacity-planning-forecasting": {
+      "version": "0.1.0",
+      "description": "Capacity trend forecasting and saturation planning"
+    },
+    "infra/data-retention-archival": {
+      "version": "0.1.0",
+      "description": "Retention lifecycle and archival management"
+    },
+    "infra/compliance-evidence-automation": {
+      "version": "0.1.0",
+      "description": "Automated compliance evidence collection and packaging"
     }
   }
 }
