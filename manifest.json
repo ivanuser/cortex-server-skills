@@ -1,234 +1,439 @@
 {
-  "version": "0.4.0",
-  "updated": "2026-03-23",
-  "skills": {
-    "apps/discourse": {
-      "version": "0.3.0",
-      "description": "> Install, configure, and manage Discourse \u2014 Docker deployment, plugins, backups, email, user manage"
+  "version": "0.5.0",
+  "updated": "2026-03-27",
+  "total": 72,
+  "skills": [
+    {
+      "name": "discourse",
+      "category": "apps",
+      "path": "apps/discourse",
+      "description": "- **Always backup before upgrading**: `./launcher backup app`"
     },
-    "apps/nextcloud": {
-      "version": "0.3.0",
-      "description": "> Install, configure, and manage Nextcloud \u2014 file sync, sharing, occ administration, upgrades, perfo"
+    {
+      "name": "nextcloud",
+      "category": "apps",
+      "path": "apps/nextcloud",
+      "description": "- **Always enable maintenance mode before upgrades**: `sudo -u www-data php occ maintenance:mode --on`"
     },
-    "cloud/aws-cli": {
-      "version": "0.3.0",
-      "description": "> Install, configure, and use the AWS CLI v2 for managing S3, EC2, IAM, CloudFormation, and other AW"
+    {
+      "name": "aws-cli",
+      "category": "cloud",
+      "path": "cloud/aws-cli",
+      "description": "- Never commit or log AWS credentials \u2014 use `~/.aws/credentials` or environment variables only."
     },
-    "cloud/azure-cli": {
-      "version": "0.3.0",
-      "description": "> Install, authenticate, and manage Azure resources including VMs, storage accounts, resource groups"
+    {
+      "name": "azure-cli",
+      "category": "cloud",
+      "path": "cloud/azure-cli",
+      "description": "- Always verify the active subscription before destructive operations: `az account show`."
     },
-    "cloud/finops-cost-optimization": {
-      "version": "0.3.0",
-      "description": "> Detect waste, right-size resources, and use lower-cost capacity options safely."
+    {
+      "name": "finops-cost-optimization",
+      "category": "cloud",
+      "path": "cloud/finops-cost-optimization",
+      "description": "- Tag resources before cleanup to avoid deleting critical assets."
     },
-    "cloud/gcloud": {
-      "version": "0.3.0",
-      "description": "> Install, authenticate, and manage Google Cloud Platform resources including Compute Engine, Cloud "
+    {
+      "name": "gcloud",
+      "category": "cloud",
+      "path": "cloud/gcloud",
+      "description": "- Never commit service account key files \u2014 use `gcloud auth` or Workload Identity instead."
     },
-    "infra/ansible": {
-      "version": "0.3.0",
-      "description": "> Install, configure, and manage Ansible for automating server provisioning, configuration, and depl"
+    {
+      "name": "identity-access-governance",
+      "category": "cloud",
+      "path": "cloud/identity-access-governance",
+      "description": "- Default deny; grant minimum required actions/resources."
     },
-    "infra/backup-disaster-recovery": {
-      "version": "0.3.0",
-      "description": "> Create reliable backups, sync them offsite, and restore fast with verification."
+    {
+      "name": "tagging-policy-enforcement",
+      "category": "cloud",
+      "path": "cloud/tagging-policy-enforcement",
+      "description": "- Do not auto-delete untagged production resources without owner verification."
     },
-    "infra/certbot": {
-      "version": "0.3.0",
-      "description": "> Install, configure, and manage Certbot for automatic TLS certificate provisioning via Let's Encryp"
+    {
+      "name": "ansible",
+      "category": "infra",
+      "path": "infra/ansible",
+      "description": "- Always use `--check` (dry run) before applying changes to production."
     },
-    "infra/chaos-engineering": {
-      "version": "0.3.0",
-      "description": "> Inject controlled faults to verify recovery, alerting, and resilience behavior before real inciden"
+    {
+      "name": "backup-disaster-recovery",
+      "category": "infra",
+      "path": "infra/backup-disaster-recovery",
+      "description": "- Never run destructive restore commands without confirming target environment and host."
     },
-    "infra/chatops-incident-communication": {
-      "version": "0.3.0",
-      "description": "> Send actionable alerts to team channels and auto-generate postmortems after incidents are resolved"
+    {
+      "name": "canary-bluegreen-deployments",
+      "category": "infra",
+      "path": "infra/canary-bluegreen-deployments",
+      "description": "- Never shift all traffic before health and error checks pass."
     },
-    "infra/docker-compose": {
-      "version": "0.3.0",
-      "description": "> Install, configure, and manage Docker Compose for defining and running multi-container application"
+    {
+      "name": "capacity-planning-forecasting",
+      "category": "infra",
+      "path": "infra/capacity-planning-forecasting",
+      "description": "- Forecast using at least 30-90 days of data."
     },
-    "infra/gitlab-runner": {
-      "version": "0.3.0",
-      "description": "> Install, register, and manage GitLab Runner for executing CI/CD pipelines. Covers Docker and Shell"
+    {
+      "name": "certbot",
+      "category": "infra",
+      "path": "infra/certbot",
+      "description": "- **Let's Encrypt has rate limits** \u2014 50 certificates per registered domain per week."
     },
-    "infra/grafana": {
-      "version": "0.3.0",
-      "description": "> Install, configure, and manage Grafana for data visualization, dashboards, and alerting. Covers da"
+    {
+      "name": "chaos-engineering",
+      "category": "infra",
+      "path": "infra/chaos-engineering",
+      "description": "- Run chaos only on approved non-critical targets first."
     },
-    "infra/high-availability-clustering": {
-      "version": "0.3.0",
-      "description": "> Build fault-tolerant data and traffic layers using replication, sentinel failover, and active heal"
+    {
+      "name": "chatops-incident-communication",
+      "category": "infra",
+      "path": "infra/chatops-incident-communication",
+      "description": "- Never post secrets, tokens, or raw credential material to chat channels."
     },
-    "infra/incident-diagnostics": {
-      "version": "0.3.0",
-      "description": "> Triage Linux incidents quickly using CPU, memory, disk, process, and network evidence."
+    {
+      "name": "compliance-evidence-automation",
+      "category": "infra",
+      "path": "infra/compliance-evidence-automation",
+      "description": "- Evidence bundles must exclude secrets and PII where not required."
     },
-    "infra/infrastructure-drift-remediation": {
-      "version": "0.3.0",
-      "description": "> Detect and reconcile cloud infrastructure drift against Terraform source of truth."
+    {
+      "name": "data-retention-archival",
+      "category": "infra",
+      "path": "infra/data-retention-archival",
+      "description": "- Never purge data without approved retention policy."
     },
-    "infra/jenkins": {
-      "version": "0.3.0",
-      "description": "> Install, configure, and manage Jenkins for continuous integration and deployment. Covers pipelines"
+    {
+      "name": "docker-compose",
+      "category": "infra",
+      "path": "infra/docker-compose",
+      "description": "- **`docker compose down -v` deletes volumes** \u2014 data loss if volumes contain databases."
     },
-    "infra/kubernetes": {
-      "version": "0.3.0",
-      "description": "> Manage Kubernetes clusters with kubectl \u2014 deployments, services, ingress, storage, debugging, Helm"
+    {
+      "name": "gitlab-runner",
+      "category": "infra",
+      "path": "infra/gitlab-runner",
+      "description": "- Don't use shared runners for sensitive builds \u2014 they can leak secrets between projects."
     },
-    "infra/log-rotation-storage-maintenance": {
-      "version": "0.3.0",
-      "description": "> Prevent disk exhaustion with logrotate policies, inode diagnostics, and safe Docker cleanup routin"
+    {
+      "name": "grafana",
+      "category": "infra",
+      "path": "infra/grafana",
+      "description": "- Change the default admin password immediately after install."
     },
-    "infra/patch-management-os-upgrades": {
-      "version": "0.3.0",
-      "description": "> Apply security updates safely, handle unattended upgrades, and coordinate reboots with minimal ser"
+    {
+      "name": "high-availability-clustering",
+      "category": "infra",
+      "path": "infra/high-availability-clustering",
+      "description": "- Test failover procedures in staging before production rollout."
     },
-    "infra/performance-tuning-stress-testing": {
-      "version": "0.3.0",
-      "description": "> Tune kernel and web stack settings, then prove improvement with repeatable load tests."
+    {
+      "name": "incident-diagnostics",
+      "category": "infra",
+      "path": "infra/incident-diagnostics",
+      "description": "- Collect evidence before restarting services unless there is an active outage requiring immediate recovery."
     },
-    "infra/prometheus": {
-      "version": "0.3.0",
-      "description": "> Install, configure, and manage Prometheus for metrics collection, alerting, and monitoring. Covers"
+    {
+      "name": "infrastructure-drift-remediation",
+      "category": "infra",
+      "path": "infra/infrastructure-drift-remediation",
+      "description": "- Run `terraform plan` before any apply; never skip review."
     },
-    "infra/ssl-certificate-lifecycle": {
-      "version": "0.3.0",
-      "description": "> Manage TLS from issuance to renewal, emergency replacement, and internal self-signed cert generati"
+    {
+      "name": "jenkins",
+      "category": "infra",
+      "path": "infra/jenkins",
+      "description": "- Change the default admin password immediately after install."
     },
-    "infra/terraform": {
-      "version": "0.3.0",
-      "description": "> Install, configure, and manage Terraform for provisioning cloud and on-prem infrastructure. Covers"
+    {
+      "name": "kubernetes",
+      "category": "infra",
+      "path": "infra/kubernetes",
+      "description": "- **Never `kubectl delete namespace` in production without triple-checking** \u2014 it deletes everything in it."
     },
-    "infra/zero-downtime-deploy": {
-      "version": "0.3.0",
-      "description": "> Deploy application updates with minimal or no user-visible downtime."
+    {
+      "name": "log-rotation-storage-maintenance",
+      "category": "infra",
+      "path": "infra/log-rotation-storage-maintenance",
+      "description": "- Prefer retention and compression over ad-hoc log deletion."
     },
-    "runtime/golang": {
-      "version": "0.3.0",
-      "description": "> Install Go, manage modules, build/run/test programs, cross-compile for multiple platforms, and dep"
+    {
+      "name": "multi-region-failover",
+      "category": "infra",
+      "path": "infra/multi-region-failover",
+      "description": "- Failover plans must be tested regularly, not documented-only."
     },
-    "runtime/java": {
-      "version": "0.3.0",
-      "description": "> Install OpenJDK, configure JAVA_HOME, manage builds with Maven and Gradle, set up Tomcat, and depl"
+    {
+      "name": "patch-management-os-upgrades",
+      "category": "infra",
+      "path": "infra/patch-management-os-upgrades",
+      "description": "- Patch in stages (dev, staging, production) for critical systems."
     },
-    "runtime/nodejs": {
-      "version": "0.3.0",
-      "description": "> Install Node.js via NVM, manage packages with npm/yarn/pnpm, run production apps with PM2, and con"
+    {
+      "name": "performance-tuning-stress-testing",
+      "category": "infra",
+      "path": "infra/performance-tuning-stress-testing",
+      "description": "- Benchmark before and after each tuning change; no blind edits."
     },
-    "runtime/python": {
-      "version": "0.3.0",
-      "description": "> Install Python, manage virtual environments, use pip/pyenv, run ASGI/WSGI servers with uvicorn/gun"
+    {
+      "name": "prometheus",
+      "category": "infra",
+      "path": "infra/prometheus",
+      "description": "- **Prometheus stores data locally** \u2014 disk fills up if retention isn't configured."
     },
-    "runtime/rust": {
-      "version": "0.3.0",
-      "description": "> Install Rust via rustup, manage projects with Cargo, build/test/run programs, cross-compile for mu"
+    {
+      "name": "queue-reliability-ops",
+      "category": "infra",
+      "path": "infra/queue-reliability-ops",
+      "description": "- Never enable infinite retries without backoff."
     },
-    "security/automated-compliance-auditing": {
-      "version": "0.3.0",
-      "description": "> Continuously validate host and cloud posture using benchmark scans, network diffing, and IAM polic"
+    {
+      "name": "service-dependency-mapping",
+      "category": "infra",
+      "path": "infra/service-dependency-mapping",
+      "description": "- Treat dependency maps as operational assets and keep them versioned."
     },
-    "security/compliance-scan": {
-      "version": "0.3.0",
-      "description": "> Scan a Linux server against NIST 800-53 rev 5 and CMMC Level 1/2/3 controls."
+    {
+      "name": "slo-sli-error-budget",
+      "category": "infra",
+      "path": "infra/slo-sli-error-budget",
+      "description": "- Use customer-impact metrics, not only infrastructure metrics."
     },
-    "security/nessus": {
-      "version": "0.3.0",
-      "description": "> Install, configure, and manage Tenable Nessus for vulnerability scanning, compliance auditing, and"
+    {
+      "name": "ssl-certificate-lifecycle",
+      "category": "infra",
+      "path": "infra/ssl-certificate-lifecycle",
+      "description": "- Renew before expiry windows; do not wait for outage conditions."
     },
-    "security/openvas": {
-      "version": "0.3.0",
-      "description": "> Install, configure, and manage the Greenbone Vulnerability Management (GVM/OpenVAS) stack for netw"
+    {
+      "name": "terraform",
+      "category": "infra",
+      "path": "infra/terraform",
+      "description": "- **`terraform destroy` deletes real infrastructure** \u2014 always review the plan first."
     },
-    "security/secrets-environment-management": {
-      "version": "0.3.0",
-      "description": "> Manage `.env` secrets securely, enforce permissions, and rotate compromised credentials with contr"
+    {
+      "name": "zero-downtime-deploy",
+      "category": "infra",
+      "path": "infra/zero-downtime-deploy",
+      "description": "- Never deploy directly into the currently active release directory."
     },
-    "security/splunk": {
-      "version": "0.3.0",
-      "description": "> Install, configure, and manage Splunk Enterprise and Universal Forwarder for log aggregation, sear"
+    {
+      "name": "golang",
+      "category": "runtime",
+      "path": "runtime/golang",
+      "description": "- Always use Go modules (`go mod init`) \u2014 GOPATH mode is legacy."
     },
-    "security/ssh-hardening-incident-response": {
-      "version": "0.3.0",
-      "description": "> Secure SSH access and respond quickly to brute-force or credential compromise events."
+    {
+      "name": "java",
+      "category": "runtime",
+      "path": "runtime/java",
+      "description": "- Always set `JAVA_HOME` before running build tools \u2014 Maven and Gradle depend on it."
     },
-    "security/wazuh": {
-      "version": "0.3.0",
-      "description": "> Install, configure, and manage Wazuh for threat detection, integrity monitoring, incident response"
+    {
+      "name": "nodejs",
+      "category": "runtime",
+      "path": "runtime/nodejs",
+      "description": "- Never run `npm install` as root \u2014 use NVM for user-space Node installs."
     },
-    "server/advanced-database-tuning": {
-      "version": "0.3.0",
-      "description": "> Improve database performance with slow query analysis, vacuum strategy, and connection pooling."
+    {
+      "name": "python",
+      "category": "runtime",
+      "path": "runtime/python",
+      "description": "- Always use virtual environments \u2014 never `pip install` into the system Python."
     },
-    "server/apache": {
-      "version": "0.3.0",
-      "description": "> Install, configure, and manage Apache for virtual hosting, PHP apps, WordPress, SSL, reverse proxy"
+    {
+      "name": "rust",
+      "category": "runtime",
+      "path": "runtime/rust",
+      "description": "- Always use `rustup` for installation \u2014 distro packages are usually outdated."
     },
-    "server/caddy": {
-      "version": "0.3.0",
-      "description": "> Install, configure, and manage Caddy for web serving, reverse proxying, and automatic TLS. Covers "
+    {
+      "name": "automated-compliance-auditing",
+      "category": "security",
+      "path": "security/automated-compliance-auditing",
+      "description": "- Run scanners in read-only mode by default."
     },
-    "server/cassandra": {
-      "version": "0.3.0",
-      "description": "> Install, configure, and manage Apache Cassandra for high-availability, wide-column data storage. C"
+    {
+      "name": "centralized-secrets-management",
+      "category": "security",
+      "path": "security/centralized-secrets-management",
+      "description": "- Never hardcode secrets in source control or container images."
     },
-    "server/cloudflare-install": {
-      "version": "0.3.0",
-      "description": "Install and configure Cloudflare Tunnel (cloudflared) to expose services securely without opening po"
+    {
+      "name": "compliance-scan",
+      "category": "security",
+      "path": "security/compliance-scan",
+      "description": "- All checks are **read-only** \u2014 no system changes are made during scanning."
     },
-    "server/cloudflare-ops": {
-      "version": "0.3.0",
+    {
+      "name": "container-runtime-hardening",
+      "category": "security",
+      "path": "security/container-runtime-hardening",
+      "description": "- Do not run containers as root unless unavoidable."
+    },
+    {
+      "name": "nessus",
+      "category": "security",
+      "path": "security/nessus",
+      "description": "- Never scan networks or hosts without explicit written authorization."
+    },
+    {
+      "name": "openvas",
+      "category": "security",
+      "path": "security/openvas",
+      "description": "- Never run scans against networks or hosts you don't own or have written authorization to scan."
+    },
+    {
+      "name": "sbom-supply-chain-security",
+      "category": "security",
+      "path": "security/sbom-supply-chain-security",
+      "description": "- Generate SBOM for every release artifact."
+    },
+    {
+      "name": "secrets-environment-management",
+      "category": "security",
+      "path": "security/secrets-environment-management",
+      "description": "- Never commit secrets to git or paste them into incident channels."
+    },
+    {
+      "name": "splunk",
+      "category": "security",
+      "path": "security/splunk",
+      "description": "- Splunk Enterprise free license is limited to 500 MB/day indexing. Exceeding it blocks searching until license resets."
+    },
+    {
+      "name": "ssh-hardening-incident-response",
+      "category": "security",
+      "path": "security/ssh-hardening-incident-response",
+      "description": "- Keep an active root/console session open while changing SSH settings."
+    },
+    {
+      "name": "waf-ddos-operations",
+      "category": "security",
+      "path": "security/waf-ddos-operations",
+      "description": "- Start custom rules in log/challenge mode before hard block."
+    },
+    {
+      "name": "wazuh",
+      "category": "security",
+      "path": "security/wazuh",
+      "description": "- Wazuh manager stores agent keys \u2014 protect `/var/ossec/etc/` and back it up regularly."
+    },
+    {
+      "name": "advanced-database-tuning",
+      "category": "server",
+      "path": "server/advanced-database-tuning",
+      "description": "- Benchmark changes before/after; avoid tuning blindly."
+    },
+    {
+      "name": "apache",
+      "category": "server",
+      "path": "server/apache",
+      "description": "- Always `apachectl configtest` (or `apache2ctl configtest`) before restarting."
+    },
+    {
+      "name": "caddy",
+      "category": "server",
+      "path": "server/caddy",
+      "description": "- Caddy automatically obtains TLS certificates \u2014 ensure DNS points to your server before enabling."
+    },
+    {
+      "name": "cassandra",
+      "category": "server",
+      "path": "server/cassandra",
+      "description": "- **`DROP KEYSPACE` is irreversible** \u2014 always snapshot before dropping."
+    },
+    {
+      "name": "cloudflare-install",
+      "category": "server",
+      "path": "server/cloudflare-install",
+      "description": "Install and configure Cloudflare Tunnel (cloudflared) to expose services securely without opening ports."
+    },
+    {
+      "name": "cloudflare-ops",
+      "category": "server",
+      "path": "server/cloudflare-ops",
       "description": "Manage Cloudflare Tunnels, DNS routing, and service exposure after cloudflared is installed."
     },
-    "server/elasticsearch": {
-      "version": "0.3.0",
-      "description": "> Install, configure, and manage Elasticsearch for full-text search, log analytics, and real-time da"
+    {
+      "name": "dns-operations",
+      "category": "server",
+      "path": "server/dns-operations",
+      "description": "- Lower TTL before planned migrations."
     },
-    "server/haproxy": {
-      "version": "0.3.0",
-      "description": "> Install, configure, and manage HAProxy for TCP/HTTP load balancing, SSL termination, health checks"
+    {
+      "name": "elasticsearch",
+      "category": "server",
+      "path": "server/elasticsearch",
+      "description": "- **Deleting an index is irreversible** \u2014 always snapshot before deletion."
     },
-    "server/memcached": {
-      "version": "0.3.0",
-      "description": "> Install, configure, and manage Memcached for high-performance in-memory key-value caching. Covers "
+    {
+      "name": "haproxy",
+      "category": "server",
+      "path": "server/haproxy",
+      "description": "- Always validate config before reload: `haproxy -c -f /etc/haproxy/haproxy.cfg`."
     },
-    "server/mongodb": {
-      "version": "0.3.0",
-      "description": "> Install, configure, and manage MongoDB for document storage. Covers collections, indexes, replica "
+    {
+      "name": "memcached",
+      "category": "server",
+      "path": "server/memcached",
+      "description": "- **Memcached has no authentication by default** \u2014 never expose to the internet without firewall rules."
     },
-    "server/mysql": {
-      "version": "0.3.0",
-      "description": "> Install, configure, and manage MySQL \u2014 databases, users, backups, replication, InnoDB tuning, and "
+    {
+      "name": "mongodb",
+      "category": "server",
+      "path": "server/mongodb",
+      "description": "- **`db.dropDatabase()` is irreversible** \u2014 never run without confirmation and backup."
     },
-    "server/nginx": {
-      "version": "0.3.0",
-      "description": "> Install, configure, and manage Nginx for static sites, reverse proxying, SSL termination, load bal"
+    {
+      "name": "mysql",
+      "category": "server",
+      "path": "server/mysql",
+      "description": "- **Never run `DROP DATABASE` without double-checking** \u2014 no undo."
     },
-    "server/postgres": {
-      "version": "0.3.0",
-      "description": "> Install, configure, and manage PostgreSQL \u2014 databases, users, backups, replication, performance tu"
+    {
+      "name": "nginx",
+      "category": "server",
+      "path": "server/nginx",
+      "description": "- Always `nginx -t` before `systemctl reload nginx` \u2014 a bad config kills all sites."
     },
-    "server/rabbitmq": {
-      "version": "0.3.0",
-      "description": "> Install, configure, and manage RabbitMQ for message queuing, pub/sub, and event-driven architectur"
+    {
+      "name": "postgres",
+      "category": "server",
+      "path": "server/postgres",
+      "description": "- **Never run `DROP DATABASE` without confirming** \u2014 there's no undo."
     },
-    "server/redis": {
-      "version": "0.3.0",
-      "description": "> Install, configure, and manage Redis for caching, sessions, pub/sub, queues, and real-time data. C"
+    {
+      "name": "rabbitmq",
+      "category": "server",
+      "path": "server/rabbitmq",
+      "description": "- **Purging a queue deletes all messages** \u2014 cannot be recovered."
     },
-    "server/sqlite": {
-      "version": "0.3.0",
-      "description": "> Use and manage SQLite for lightweight, serverless, embedded databases. Covers database creation, s"
+    {
+      "name": "redis",
+      "category": "server",
+      "path": "server/redis",
+      "description": "- **`FLUSHALL` wipes everything** \u2014 never run in production without confirmation."
     },
-    "server/user-permission-ops": {
-      "version": "0.3.0",
-      "description": "> Create users safely, grant least-privilege sudo access, and fix file permission issues without bre"
+    {
+      "name": "sqlite",
+      "category": "server",
+      "path": "server/sqlite",
+      "description": "- **`DROP TABLE` and `DELETE` without `WHERE` are irreversible** \u2014 backup first."
     },
-    "server/wireguard": {
-      "version": "0.3.0",
-      "description": "> Install, configure, and manage WireGuard for fast, secure VPN tunnels. Covers key generation, serv"
+    {
+      "name": "user-permission-ops",
+      "category": "server",
+      "path": "server/user-permission-ops",
+      "description": "- Use `visudo` and `/etc/sudoers.d/` files; never edit `/etc/sudoers` blindly."
+    },
+    {
+      "name": "wireguard",
+      "category": "server",
+      "path": "server/wireguard",
+      "description": "- **Private keys must never be shared** \u2014 regenerate if compromised."
     }
-  }
+  ]
 }
