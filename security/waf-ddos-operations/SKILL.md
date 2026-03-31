@@ -29,6 +29,27 @@ curl -fsS https://app.example.com/health
 - Apply geo/rate/challenge controls.
 - Protect login and API endpoints first.
 
+## Rule Tuning Workflow
+
+1. Start in log/challenge mode.
+2. Measure blocked vs allowed outcomes.
+3. Add exceptions for known-good automated clients.
+4. Promote to block once false positives are acceptable.
+
+## Validation
+
+```bash
+# Baseline endpoint health
+curl -fsS https://app.example.com/health
+
+# Validate protected endpoint behavior (expect challenge/block based on policy)
+curl -I https://app.example.com/login
+```
+
+Success criteria:
+- Attack traffic reduced.
+- Legit traffic impact remains within acceptable threshold.
+
 ## Troubleshooting
 
 - Legit users blocked: narrow rule scope and add verified allowlists.

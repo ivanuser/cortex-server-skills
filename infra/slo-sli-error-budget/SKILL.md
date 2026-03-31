@@ -30,11 +30,44 @@ sum(rate(http_requests_total{code!~"5.."}[5m])) / sum(rate(http_requests_total[5
 - Fast burn alert: catches severe incidents quickly.
 - Slow burn alert: catches chronic degradation.
 
+Example PromQL patterns:
+
+```promql
+# 5m error ratio
+1 - (
+  sum(rate(http_requests_total{code!~"5.."}[5m])) /
+  sum(rate(http_requests_total[5m]))
+)
+
+# 1h error ratio (slow burn)
+1 - (
+  sum(rate(http_requests_total{code!~"5.."}[1h])) /
+  sum(rate(http_requests_total[1h]))
+)
+```
+
 ## Release Gating
 
 1. Check current error budget consumption.
 2. If exhausted, block risky releases.
 3. Allow only reliability fixes until budget recovers.
+
+## Incident Policy Hooks
+
+- If fast-burn alert fires: declare incident and page on-call.
+- If slow-burn alert fires repeatedly: open reliability ticket and freeze non-critical changes.
+- Document consumed budget by service weekly.
+
+## Validation
+
+```bash
+# Sanity-check SLI math from API/dashboard exports
+# Verify numerator and denominator use same filter set and time window.
+```
+
+Success criteria:
+- Alert triggers on synthetic outage.
+- Release gate blocks when budget threshold is exceeded.
 
 ## Troubleshooting
 

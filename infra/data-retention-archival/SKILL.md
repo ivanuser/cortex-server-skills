@@ -28,6 +28,17 @@
 - Archive: when data moves to cheaper storage.
 - Delete: when secure deletion occurs.
 
+## Validation
+
+```bash
+# Validate lifecycle transitions and restore path for sampled records.
+# Confirm legal-hold tagged datasets are excluded from deletion policies.
+```
+
+Success criteria:
+- Data transitions occur per policy windows.
+- Archived data restore tested and documented.
+
 ## Troubleshooting
 
 - Retrieval too slow for incident needs: keep recent index/metadata in warm tier.

@@ -29,6 +29,17 @@
 - Backup and restore test logs.
 - Change management records.
 
+## Validation
+
+```bash
+# Validate each control has a populated evidence bundle path
+# and checksum file for the current reporting window.
+```
+
+Success criteria:
+- Evidence is complete, timestamped, and reproducible for audit requests.
+- Missing-control evidence triggers automatic owner notification.
+
 ## Troubleshooting
 
 - Missing evidence for control: add source mapping and owner assignment.

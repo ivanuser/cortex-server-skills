@@ -29,6 +29,23 @@
 - Reload apps gracefully.
 - Revoke old credential.
 
+## Access Control Model
+
+- Separate read/write/rotate roles.
+- Grant app runtime read only to required paths.
+- Use short-lived credentials where supported.
+
+## Validation
+
+```bash
+# Validate app starts with managed secret fetch enabled
+# and no plaintext secrets in local config files.
+```
+
+Success criteria:
+- Applications read secrets from manager, not repo/env files.
+- Rotation completes without downtime or auth failures.
+
 ## Troubleshooting
 
 - App startup failures after migration: missing IAM role/policy mapping.

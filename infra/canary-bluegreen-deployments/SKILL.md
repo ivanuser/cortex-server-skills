@@ -32,11 +32,34 @@ curl -fsS https://app.example.com/health
 3. Switch traffic atomically.
 4. Keep previous color hot for quick rollback.
 
+## Metric Gates
+
+Recommended promotion checks per phase:
+- Error rate delta vs baseline < 1%.
+- p95 latency regression < 10%.
+- Saturation (CPU/memory) below safe ceiling.
+- Business conversion/event rate stable.
+
 ## Rollback Triggers
 
 - 5xx error rate above threshold.
 - Latency regression (p95/p99).
 - Business KPI regression.
+
+## Validation
+
+```bash
+# Health probes
+curl -fsS https://app.example.com/health
+curl -fsS https://app.example.com/ready
+
+# Optional synthetic
+curl -fsS https://app.example.com/login
+```
+
+Success criteria:
+- Canary phase completes without guardrail breach.
+- Rollback path tested at least once per release train.
 
 ## Troubleshooting
 
