@@ -29,6 +29,24 @@ systemctl list-units --type=service
 - Identify safe rollback boundaries.
 - Prioritize restoration by user impact.
 
+## Suggested Data Sources
+
+- Service registry and deployment metadata.
+- Runtime network telemetry (`ss`, eBPF flow data, mesh metrics).
+- API gateway route maps.
+- Queue/topic producer-consumer maps.
+
+## Validation
+
+```bash
+# Validate critical path dependencies are present in mapping
+# (auth -> api -> db/cache/queue)
+```
+
+Success criteria:
+- Every tier-1 service has owner, dependencies, and on-call target.
+- Mapping updated in same change window as architecture changes.
+
 ## Troubleshooting
 
 - Map stale after deployments: enforce map update as release checklist item.

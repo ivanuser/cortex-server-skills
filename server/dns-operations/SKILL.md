@@ -24,6 +24,25 @@ dig @1.1.1.1 app.example.com +short
 4. Verify from multiple resolvers/regions.
 5. Restore TTL if stable.
 
+## Record-Type Guidance
+
+- `A/AAAA`: direct IP mapping.
+- `CNAME`: aliasing, avoid apex where provider forbids.
+- `TXT`: verification/SPF/ownership.
+- `MX`: mail routing, validate priority order.
+
+## Validation
+
+```bash
+dig app.example.com A +short
+dig @1.1.1.1 app.example.com +short
+dig @8.8.8.8 app.example.com +short
+```
+
+Success criteria:
+- Authoritative and public resolvers agree on target record.
+- Service health checks pass after propagation.
+
 ## Troubleshooting
 
 - Record updated in provider but not globally: propagation/TTL cache delay.

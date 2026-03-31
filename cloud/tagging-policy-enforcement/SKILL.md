@@ -28,6 +28,23 @@
 - Cost visibility by team/service.
 - Untagged resource backlog trend.
 
+## Enforcement Points
+
+- IaC modules with required tag variables.
+- Org policy/SCP checks at account or project level.
+- Scheduled remediation jobs for low-risk resources.
+
+## Validation
+
+```bash
+# Validate resources contain required tags (tooling/provider specific)
+# Example required keys: Owner, Environment, CostCenter, Service
+```
+
+Success criteria:
+- New resources are created with mandatory tags.
+- Cost reports map spend to owning team/service.
+
 ## Troubleshooting
 
 - Tags missing after deploy: check IaC module defaults and provider-level tag inheritance.

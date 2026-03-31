@@ -29,6 +29,24 @@ docker inspect <container_id> | grep -E 'Privileged|CapAdd|ReadonlyRootfs'
 - Require signed images from trusted registries.
 - Disallow hostPath mounts for sensitive paths.
 
+## Runtime Guardrails
+
+- Apply CPU/memory limits for each workload.
+- Use read-only root FS and explicit writable mounts.
+- Drop `NET_RAW` unless explicitly needed.
+- Enforce image tag immutability or digest pinning.
+
+## Validation
+
+```bash
+docker ps
+docker inspect <container_id> | grep -E 'Privileged|ReadonlyRootfs|CapAdd|SecurityOpt'
+```
+
+Success criteria:
+- No privileged production containers.
+- Policy checks pass in CI/CD admission gates.
+
 ## Troubleshooting
 
 - App breaks under read-only FS: mount explicit writable paths only.

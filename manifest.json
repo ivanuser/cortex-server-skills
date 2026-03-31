@@ -4,42 +4,42 @@
   "skills": {
     "apps/nextcloud": {
       "version": "1.0.0",
-      "title": "Nextcloud \u2014 Self-Hosted Cloud Platform",
-      "description": "Install, configure, and manage Nextcloud \u2014 file sync, sharing, occ administration, upgrades, performance tuning, and int",
+      "title": "Nextcloud — Self-Hosted Cloud Platform",
+      "description": "Install, configure, and manage Nextcloud — file sync, sharing, occ administration, upgrades, performance tuning, and int",
       "updated": "2026-03-27",
       "author": "ivanuser"
     },
     "apps/discourse": {
       "version": "1.0.0",
-      "title": "Discourse \u2014 Community Forum Platform",
-      "description": "Install, configure, and manage Discourse \u2014 Docker deployment, plugins, backups, email, user management, API, and perform",
+      "title": "Discourse — Community Forum Platform",
+      "description": "Install, configure, and manage Discourse — Docker deployment, plugins, backups, email, user management, API, and perform",
       "updated": "2026-03-27",
       "author": "ivanuser"
     },
     "server/memcached": {
       "version": "1.0.0",
-      "title": "Memcached \u2014 Distributed Memory Cache",
+      "title": "Memcached — Distributed Memory Cache",
       "description": "Install, configure, and manage Memcached for high-performance in-memory key-value caching. Covers configuration, stats, ",
       "updated": "2026-03-27",
       "author": "ivanuser"
     },
     "server/redis": {
       "version": "1.0.0",
-      "title": "Redis \u2014 In-Memory Data Store",
+      "title": "Redis — In-Memory Data Store",
       "description": "Install, configure, and manage Redis for caching, sessions, pub/sub, queues, and real-time data. Covers persistence, Sen",
       "updated": "2026-03-27",
       "author": "ivanuser"
     },
     "server/wireguard": {
       "version": "1.0.0",
-      "title": "WireGuard \u2014 Modern VPN",
+      "title": "WireGuard — Modern VPN",
       "description": "Install, configure, and manage WireGuard for fast, secure VPN tunnels. Covers key generation, server/client setup, peer ",
       "updated": "2026-03-27",
       "author": "ivanuser"
     },
     "server/user-permission-ops": {
       "version": "1.0.0",
-      "title": "User & Permission Operations \u2014 Access, Sudo, Ownership Fixes",
+      "title": "User & Permission Operations — Access, Sudo, Ownership Fixes",
       "description": "Create users safely, grant least-privilege sudo access, and fix file permission issues without breaking services.",
       "updated": "2026-03-27",
       "author": "ivanuser"
@@ -53,50 +53,50 @@
     },
     "server/elasticsearch": {
       "version": "1.0.0",
-      "title": "Elasticsearch \u2014 Search & Analytics Engine",
+      "title": "Elasticsearch — Search & Analytics Engine",
       "description": "Install, configure, and manage Elasticsearch for full-text search, log analytics, and real-time data indexing. Covers in",
       "updated": "2026-03-27",
       "author": "ivanuser"
     },
     "server/rabbitmq": {
       "version": "1.0.0",
-      "title": "RabbitMQ \u2014 Message Broker",
+      "title": "RabbitMQ — Message Broker",
       "description": "Install, configure, and manage RabbitMQ for message queuing, pub/sub, and event-driven architectures. Covers exchanges, ",
       "updated": "2026-03-27",
       "author": "ivanuser"
     },
     "server/caddy": {
       "version": "1.0.0",
-      "title": "Caddy \u2014 Modern Web Server with Automatic HTTPS",
+      "title": "Caddy — Modern Web Server with Automatic HTTPS",
       "description": "Install, configure, and manage Caddy for web serving, reverse proxying, and automatic TLS. Covers Caddyfile syntax, auto",
       "updated": "2026-03-27",
       "author": "ivanuser"
     },
     "server/cassandra": {
       "version": "1.0.0",
-      "title": "Cassandra \u2014 Distributed NoSQL Database",
+      "title": "Cassandra — Distributed NoSQL Database",
       "description": "Install, configure, and manage Apache Cassandra for high-availability, wide-column data storage. Covers CQL, keyspaces, ",
       "updated": "2026-03-27",
       "author": "ivanuser"
     },
     "server/cloudflare-install": {
       "version": "1.0.0",
-      "title": "cloudflare-install \u2014 Cloudflare Tunnel Setup",
+      "title": "cloudflare-install — Cloudflare Tunnel Setup",
       "description": "Install and configure Cloudflare Tunnel (cloudflared) to expose services securely without opening ports.",
       "updated": "2026-03-27",
       "author": "ivanuser"
     },
     "server/nginx": {
       "version": "1.0.0",
-      "title": "Nginx \u2014 Web Server & Reverse Proxy",
+      "title": "Nginx — Web Server & Reverse Proxy",
       "description": "Install, configure, and manage Nginx for static sites, reverse proxying, SSL termination, load balancing, and performanc",
       "updated": "2026-03-27",
       "author": "ivanuser"
     },
     "server/postgres": {
       "version": "1.0.0",
-      "title": "PostgreSQL \u2014 Relational Database",
-      "description": "Install, configure, and manage PostgreSQL \u2014 databases, users, backups, replication, performance tuning, and monitoring.",
+      "title": "PostgreSQL — Relational Database",
+      "description": "Install, configure, and manage PostgreSQL — databases, users, backups, replication, performance tuning, and monitoring.",
       "updated": "2026-03-27",
       "author": "ivanuser"
     },
@@ -109,7 +109,7 @@
     },
     "server/mongodb": {
       "version": "1.0.0",
-      "title": "MongoDB \u2014 Document Database",
+      "title": "MongoDB — Document Database",
       "description": "Install, configure, and manage MongoDB for document storage. Covers collections, indexes, replica sets, sharding, backup",
       "updated": "2026-03-27",
       "author": "ivanuser"
@@ -123,28 +123,28 @@
     },
     "server/mysql": {
       "version": "1.0.0",
-      "title": "MySQL \u2014 Relational Database",
-      "description": "Install, configure, and manage MySQL \u2014 databases, users, backups, replication, InnoDB tuning, and security hardening.",
+      "title": "MySQL — Relational Database",
+      "description": "Install, configure, and manage MySQL — databases, users, backups, replication, InnoDB tuning, and security hardening.",
       "updated": "2026-03-27",
       "author": "ivanuser"
     },
     "server/haproxy": {
       "version": "1.0.0",
-      "title": "HAProxy \u2014 High Availability Load Balancer",
+      "title": "HAProxy — High Availability Load Balancer",
       "description": "Install, configure, and manage HAProxy for TCP/HTTP load balancing, SSL termination, health checks, and traffic manageme",
       "updated": "2026-03-27",
       "author": "ivanuser"
     },
     "server/cloudflare-ops": {
       "version": "1.0.0",
-      "title": "cloudflare-ops \u2014 Cloudflare Tunnel Operations",
+      "title": "cloudflare-ops — Cloudflare Tunnel Operations",
       "description": "Manage Cloudflare Tunnels, DNS routing, and service exposure after cloudflared is installed.",
       "updated": "2026-03-27",
       "author": "ivanuser"
     },
     "server/sqlite": {
       "version": "1.0.0",
-      "title": "SQLite \u2014 Embedded Relational Database",
+      "title": "SQLite — Embedded Relational Database",
       "description": "Use and manage SQLite for lightweight, serverless, embedded databases. Covers database creation, schema, queries, backup",
       "updated": "2026-03-27",
       "author": "ivanuser"
@@ -172,56 +172,56 @@
     },
     "cloud/azure-cli": {
       "version": "1.0.0",
-      "title": "Azure CLI \u2014 Microsoft Azure Command Line Interface",
+      "title": "Azure CLI — Microsoft Azure Command Line Interface",
       "description": "Install, authenticate, and manage Azure resources including VMs, storage accounts, resource groups, and AKS clusters fro",
       "updated": "2026-03-27",
       "author": "ivanuser"
     },
     "cloud/aws-cli": {
       "version": "1.0.0",
-      "title": "AWS CLI v2 \u2014 Amazon Web Services Command Line Interface",
+      "title": "AWS CLI v2 — Amazon Web Services Command Line Interface",
       "description": "Install, configure, and use the AWS CLI v2 for managing S3, EC2, IAM, CloudFormation, and other AWS services from the te",
       "updated": "2026-03-27",
       "author": "ivanuser"
     },
     "cloud/gcloud": {
       "version": "1.0.0",
-      "title": "Google Cloud CLI (gcloud) \u2014 GCP Command Line Interface",
+      "title": "Google Cloud CLI (gcloud) — GCP Command Line Interface",
       "description": "Install, authenticate, and manage Google Cloud Platform resources including Compute Engine, Cloud Storage, IAM, and App ",
       "updated": "2026-03-27",
       "author": "ivanuser"
     },
     "runtime/java": {
       "version": "1.0.0",
-      "title": "Java \u2014 OpenJDK Runtime & Build Tools",
+      "title": "Java — OpenJDK Runtime & Build Tools",
       "description": "Install OpenJDK, configure JAVA_HOME, manage builds with Maven and Gradle, set up Tomcat, and deploy Spring Boot applica",
       "updated": "2026-03-27",
       "author": "ivanuser"
     },
     "runtime/python": {
       "version": "1.0.0",
-      "title": "Python \u2014 Runtime Environment & Package Management",
+      "title": "Python — Runtime Environment & Package Management",
       "description": "Install Python, manage virtual environments, use pip/pyenv, run ASGI/WSGI servers with uvicorn/gunicorn, and deploy Pyth",
       "updated": "2026-03-27",
       "author": "ivanuser"
     },
     "runtime/rust": {
       "version": "1.0.0",
-      "title": "Rust \u2014 Systems Programming Language & Cargo Build System",
+      "title": "Rust — Systems Programming Language & Cargo Build System",
       "description": "Install Rust via rustup, manage projects with Cargo, build/test/run programs, cross-compile for multiple targets, create",
       "updated": "2026-03-27",
       "author": "ivanuser"
     },
     "runtime/nodejs": {
       "version": "1.0.0",
-      "title": "Node.js \u2014 JavaScript Runtime Environment",
+      "title": "Node.js — JavaScript Runtime Environment",
       "description": "Install Node.js via NVM, manage packages with npm/yarn/pnpm, run production apps with PM2, and configure server-side Jav",
       "updated": "2026-03-27",
       "author": "ivanuser"
     },
     "runtime/golang": {
       "version": "1.0.0",
-      "title": "Go (Golang) \u2014 Runtime & Build Environment",
+      "title": "Go (Golang) — Runtime & Build Environment",
       "description": "Install Go, manage modules, build/run/test programs, cross-compile for multiple platforms, and deploy Go services with s",
       "updated": "2026-03-27",
       "author": "ivanuser"
@@ -249,14 +249,14 @@
     },
     "infra/incident-diagnostics": {
       "version": "1.0.0",
-      "title": "Incident Diagnostics \u2014 System Troubleshooting & Root Cause Analysis",
+      "title": "Incident Diagnostics — System Troubleshooting & Root Cause Analysis",
       "description": "Triage Linux incidents quickly using CPU, memory, disk, process, and network evidence.",
       "updated": "2026-03-27",
       "author": "ivanuser"
     },
     "infra/docker-compose": {
       "version": "1.0.0",
-      "title": "Docker Compose \u2014 Multi-Container Applications",
+      "title": "Docker Compose — Multi-Container Applications",
       "description": "Install, configure, and manage Docker Compose for defining and running multi-container applications. Covers compose file",
       "updated": "2026-03-27",
       "author": "ivanuser"
@@ -270,14 +270,14 @@
     },
     "infra/zero-downtime-deploy": {
       "version": "1.0.0",
-      "title": "Zero-Downtime Deploy \u2014 Release, Migrate, Rollback",
+      "title": "Zero-Downtime Deploy — Release, Migrate, Rollback",
       "description": "Deploy application updates with minimal or no user-visible downtime.",
       "updated": "2026-03-27",
       "author": "ivanuser"
     },
     "infra/jenkins": {
       "version": "1.0.0",
-      "title": "Jenkins \u2014 CI/CD Automation Server",
+      "title": "Jenkins — CI/CD Automation Server",
       "description": "Install, configure, and manage Jenkins for continuous integration and deployment. Covers pipelines, Jenkinsfile, plugins",
       "updated": "2026-03-27",
       "author": "ivanuser"
@@ -305,7 +305,7 @@
     },
     "infra/ansible": {
       "version": "1.0.0",
-      "title": "Ansible \u2014 Configuration Management & Automation",
+      "title": "Ansible — Configuration Management & Automation",
       "description": "Install, configure, and manage Ansible for automating server provisioning, configuration, and deployments. Covers invent",
       "updated": "2026-03-27",
       "author": "ivanuser"
@@ -319,7 +319,7 @@
     },
     "infra/grafana": {
       "version": "1.0.0",
-      "title": "Grafana \u2014 Observability & Dashboards",
+      "title": "Grafana — Observability & Dashboards",
       "description": "Install, configure, and manage Grafana for data visualization, dashboards, and alerting. Covers data sources, dashboard ",
       "updated": "2026-03-27",
       "author": "ivanuser"
@@ -333,7 +333,7 @@
     },
     "infra/certbot": {
       "version": "1.0.0",
-      "title": "Certbot \u2014 Let's Encrypt TLS Certificates",
+      "title": "Certbot — Let's Encrypt TLS Certificates",
       "description": "Install, configure, and manage Certbot for automatic TLS certificate provisioning via Let's Encrypt. Covers nginx/Apache",
       "updated": "2026-03-27",
       "author": "ivanuser"
@@ -354,21 +354,21 @@
     },
     "infra/chaos-engineering": {
       "version": "1.0.0",
-      "title": "Chaos Engineering \u2014 Controlled Failure Validation",
+      "title": "Chaos Engineering — Controlled Failure Validation",
       "description": "Inject controlled faults to verify recovery, alerting, and resilience behavior before real incidents happen.",
       "updated": "2026-03-27",
       "author": "ivanuser"
     },
     "infra/backup-disaster-recovery": {
       "version": "1.0.0",
-      "title": "Backup & Disaster Recovery \u2014 Database and Offsite Protection",
+      "title": "Backup & Disaster Recovery — Database and Offsite Protection",
       "description": "Create reliable backups, sync them offsite, and restore fast with verification.",
       "updated": "2026-03-27",
       "author": "ivanuser"
     },
     "infra/gitlab-runner": {
       "version": "1.0.0",
-      "title": "GitLab Runner \u2014 CI/CD Job Executor",
+      "title": "GitLab Runner — CI/CD Job Executor",
       "description": "Install, register, and manage GitLab Runner for executing CI/CD pipelines. Covers Docker and Shell executors, configurat",
       "updated": "2026-03-27",
       "author": "ivanuser"
@@ -382,21 +382,21 @@
     },
     "infra/kubernetes": {
       "version": "1.0.0",
-      "title": "Kubernetes \u2014 Container Orchestration",
-      "description": "Manage Kubernetes clusters with kubectl \u2014 deployments, services, ingress, storage, debugging, Helm, and common troublesh",
+      "title": "Kubernetes — Container Orchestration",
+      "description": "Manage Kubernetes clusters with kubectl — deployments, services, ingress, storage, debugging, Helm, and common troublesh",
       "updated": "2026-03-27",
       "author": "ivanuser"
     },
     "infra/prometheus": {
       "version": "1.0.0",
-      "title": "Prometheus \u2014 Monitoring & Alerting",
+      "title": "Prometheus — Monitoring & Alerting",
       "description": "Install, configure, and manage Prometheus for metrics collection, alerting, and monitoring. Covers scrape configuration,",
       "updated": "2026-03-27",
       "author": "ivanuser"
     },
     "infra/terraform": {
       "version": "1.0.0",
-      "title": "Terraform \u2014 Infrastructure as Code",
+      "title": "Terraform — Infrastructure as Code",
       "description": "Install, configure, and manage Terraform for provisioning cloud and on-prem infrastructure. Covers init, plan, apply, st",
       "updated": "2026-03-27",
       "author": "ivanuser"
@@ -424,7 +424,7 @@
     },
     "security/openvas": {
       "version": "1.0.0",
-      "title": "OpenVAS / Greenbone \u2014 Vulnerability Scanner",
+      "title": "OpenVAS / Greenbone — Vulnerability Scanner",
       "description": "Install, configure, and manage the Greenbone Vulnerability Management (GVM/OpenVAS) stack for network vulnerability scan",
       "updated": "2026-03-27",
       "author": "ivanuser"
@@ -459,14 +459,14 @@
     },
     "security/wazuh": {
       "version": "1.0.0",
-      "title": "Wazuh \u2014 SIEM / XDR Platform",
+      "title": "Wazuh — SIEM / XDR Platform",
       "description": "Install, configure, and manage Wazuh for threat detection, integrity monitoring, incident response, and regulatory compl",
       "updated": "2026-03-27",
       "author": "ivanuser"
     },
     "security/compliance-scan": {
       "version": "1.0.0",
-      "title": "Compliance Scan \u2014 NIST 800-53 r5 + CMMC Control Checks",
+      "title": "Compliance Scan — NIST 800-53 r5 + CMMC Control Checks",
       "description": "Scan a Linux server against NIST 800-53 rev 5 and CMMC Level 1/2/3 controls.",
       "updated": "2026-03-27",
       "author": "ivanuser"
@@ -487,7 +487,7 @@
     },
     "security/splunk": {
       "version": "1.0.0",
-      "title": "Splunk \u2014 Log Analysis & SIEM",
+      "title": "Splunk — Log Analysis & SIEM",
       "description": "Install, configure, and manage Splunk Enterprise and Universal Forwarder for log aggregation, search, alerting, and secu",
       "updated": "2026-03-27",
       "author": "ivanuser"
@@ -501,10 +501,14 @@
     },
     "security/nessus": {
       "version": "1.0.0",
-      "title": "Nessus \u2014 Vulnerability Scanner",
+      "title": "Nessus — Vulnerability Scanner",
       "description": "Install, configure, and manage Tenable Nessus for vulnerability scanning, compliance auditing, and security assessment o",
       "updated": "2026-03-27",
       "author": "ivanuser"
+    },
+    "infra/openobserve": {
+      "description": "OpenObserve observability platform operations",
+      "version": "0.1.0"
     }
   }
 }

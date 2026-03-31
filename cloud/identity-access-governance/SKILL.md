@@ -31,6 +31,23 @@ aws iam list-attached-role-policies --role-name <role>
 - MFA required.
 - Incident ticket required.
 
+## Review Cadence
+
+- Weekly: detect newly attached broad policies.
+- Monthly: remove unused roles/users.
+- Quarterly: full access recertification by service owner.
+
+## Validation
+
+```bash
+aws iam list-attached-role-policies --role-name <role>
+aws iam generate-service-last-accessed-details --arn <role-arn>
+```
+
+Success criteria:
+- No standing admin rights outside approved break-glass paths.
+- Access review evidence retained for audit window.
+
 ## Troubleshooting
 
 - Permission denied after tightening policy: add least-privilege allow for exact action/resource.

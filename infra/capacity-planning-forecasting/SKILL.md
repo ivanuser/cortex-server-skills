@@ -28,6 +28,24 @@
 - Recommended scaling action and deadline.
 - Confidence level and assumptions.
 
+## Data Inputs
+
+- 30/60/90-day utilization trends.
+- Peak concurrency windows.
+- Planned launches/events.
+- Incident history tied to saturation events.
+
+## Validation
+
+```bash
+# Compare forecast vs actual monthly utilization after rollout.
+# Track forecast error and adjust model assumptions.
+```
+
+Success criteria:
+- Forecast identifies saturation before customer-visible impact.
+- Capacity actions completed ahead of predicted exhaustion.
+
 ## Troubleshooting
 
 - Forecast misses spikes: include event/launch calendar and anomaly adjustments.

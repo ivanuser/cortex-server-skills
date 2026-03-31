@@ -503,6 +503,8 @@ kubectl get pod pod-name -n myapp -o yaml
 
 ## Common Troubleshooting
 
+## Troubleshooting
+
 ### Pod stuck in `Pending`
 
 ```bash

@@ -32,6 +32,28 @@ redis-cli llen jobs:pending
 3. Triage root cause.
 4. Replay safely after fix.
 
+## Operational Metrics
+
+- Queue depth and growth rate.
+- Consumer lag and processing latency.
+- Retry count distribution.
+- DLQ arrival rate.
+
+## Validation
+
+```bash
+# RabbitMQ sample checks
+rabbitmqctl list_queues name messages_ready messages_unacknowledged consumers
+
+# Redis queue depth
+redis-cli llen jobs:pending
+redis-cli llen jobs:dead
+```
+
+Success criteria:
+- Backlog drains under normal load.
+- DLQ replay succeeds after fix without duplicate side effects.
+
 ## Troubleshooting
 
 - Queue lag grows with normal traffic: consumers under-provisioned or downstream bottleneck.

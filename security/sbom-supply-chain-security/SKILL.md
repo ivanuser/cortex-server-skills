@@ -29,6 +29,18 @@ grype sbom:sbom.json
 - Track component ownership and patch SLAs.
 - Maintain exception process with expiry dates.
 
+## Validation
+
+```bash
+# Generate + scan (tooling varies by stack)
+syft . -o json > sbom.json
+grype sbom:sbom.json
+```
+
+Success criteria:
+- Every deployable artifact has SBOM attached.
+- Critical findings above policy threshold block release.
+
 ## Troubleshooting
 
 - Scan noise too high: tune ignores with justification and expiration.
