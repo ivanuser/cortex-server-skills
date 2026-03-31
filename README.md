@@ -157,15 +157,27 @@ _Generated from `manifest.json` by `pwsh ./scripts/generate-readme-index.ps1`._
 pwsh ./scripts/validate-skills.ps1
 ```
 
+```bash
+./scripts/validate-skills.sh
+```
+
 - Optional strict mode (fails on warnings too):
 
 ```powershell
 pwsh ./scripts/validate-skills.ps1 -Strict
 ```
 
+```bash
+./scripts/validate-skills.sh --strict
+```
+
 - Regenerate README summary + full index from manifest:
 
 ```powershell
 pwsh ./scripts/generate-readme-index.ps1
+```
+
+```bash
+./scripts/generate-readme-index.sh
 ```
 
