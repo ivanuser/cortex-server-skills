@@ -161,6 +161,12 @@ pwsh ./scripts/validate-skills.ps1
 ./scripts/validate-skills.sh
 ```
 
+Validator checks include:
+- Required skill sections (`Safety Rules`, `Quick Reference`, `Troubleshooting`)
+- Presence of code blocks and validation guidance
+- `manifest.json` license field
+- Minimum manifest description quality (rejects very short descriptions)
+
 - Optional strict mode (fails on warnings too):
 
 ```powershell

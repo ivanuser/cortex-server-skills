@@ -31,6 +31,34 @@ if ! command -v find >/dev/null 2>&1; then
   exit 1
 fi
 
+if [[ ! -f "manifest.json" ]]; then
+  echo "Error: manifest.json not found." >&2
+  exit 1
+fi
+
+if ! command -v jq >/dev/null 2>&1; then
+  echo "Error: 'jq' is required for manifest checks." >&2
+  exit 1
+fi
+
+license="$(jq -r '.license // ""' manifest.json)"
+if [[ -z "$license" || "$license" == "null" ]]; then
+  echo "Error: manifest.json missing required 'license' field." >&2
+  exit 1
+fi
+
+short_desc_count="$(jq '[.skills | to_entries[] | select((.value.description // "") | length < 20)] | length' manifest.json)"
+if [[ "$short_desc_count" != "0" ]]; then
+  echo "[FAIL] manifest descriptions too short (<20 chars):" >&2
+  jq -r '
+    .skills
+    | to_entries[]
+    | select((.value.description // "") | length < 20)
+    | "  - \(.key) (\((.value.description // "") | length)) '\''\(.value.description // "")'\''"
+  ' manifest.json >&2
+  exit 1
+fi
+
 mapfile -t skills < <(find . -type f -name "SKILL.md" | sort)
 
 if [[ ${#skills[@]} -eq 0 ]]; then
@@ -95,4 +123,3 @@ if (( STRICT == 1 && warn_count > 0 )); then
   echo "Strict mode failed due to warnings." >&2
   exit 1
 fi
-
